@@ -342,7 +342,7 @@ class Client
 
         $metadata = array();
         foreach ($response->metadatum as $metadatum_node) {
-            $metadata[] = new Ut_DocRepo_Model_Metadatum((string)$metadatum_node->name, (string)$metadatum_node->value);
+            $metadata[] = new Metadatum((string)$metadatum_node->name, (string)$metadatum_node->value);
         }
         return $metadata;
     }
@@ -364,7 +364,7 @@ class Client
 
         $files = array();
         foreach ($response->files->children() as $file_node) {
-            $file = new Ut_DocRepo_Model_File();
+            $file = new File();
             $files[] = $file->fromSimpleXMLElement($file_node);
         }
         return $files;
