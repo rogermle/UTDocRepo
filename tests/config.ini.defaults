@@ -1,0 +1,6 @@
+;; Document Repository connection parameters
+
+url_prefix ='http://docrep-test.its.utexas.edu/docrepo-test/api'
+user_agent = 'Test PHP by Sunil'
+repo_name = 'test'
+repo_password = 'test'
