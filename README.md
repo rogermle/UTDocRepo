@@ -1,7 +1,7 @@
 # UT DocRepositoryPHP
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/rogermle/docrepo.svg?branch=master)](https://travis-ci.org/rogermle/docrepo)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
