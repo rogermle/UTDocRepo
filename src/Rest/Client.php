@@ -7,21 +7,21 @@
  * Copyright (c) 2017 University of Texas at Austin
  */
 
-namespace Ut\DocRepo\Rest;
+namespace Utexas\DocRepo\Rest;
 
-use Ut\DocRepo\Exception\AuthorizationError;
-use Ut\DocRepo\Exception\InternalError;
-use Ut\DocRepo\Exception\InvalidRequest;
-use Ut\DocRepo\Exception\InvalidSignature;
-use Ut\DocRepo\Exception\Malware;
-use Ut\DocRepo\Exception\ResourceNotFound;
-use Ut\DocRepo\Exception;
-use Ut\DocRepo\Model\File;
-use Ut\DocRepo\Model\Metadatum;
+use Utexas\DocRepo\Exception\AuthorizationError;
+use Utexas\DocRepo\Exception\InternalError;
+use Utexas\DocRepo\Exception\InvalidRequest;
+use Utexas\DocRepo\Exception\InvalidSignature;
+use Utexas\DocRepo\Exception\Malware;
+use Utexas\DocRepo\Exception\ResourceNotFound;
+use Utexas\DocRepo\Exception;
+use Utexas\DocRepo\Model\File;
+use Utexas\DocRepo\Model\Metadatum;
 
 /**
  * UT Austin/ITS Document Repository Client
- * @package Ut\Docrepo\Rest
+ * @package Utexas\Docrepo\Rest
  */
 class Client
 {
@@ -122,7 +122,7 @@ class Client
             foreach ($metadatum as $name => $value) {
                 $metadatum = new Metadatum($name, $value);
             }
-        } elseif (!is_a($metadatum, 'Ut\DocRepo\Model\Metadatum')) {
+        } elseif (!is_a($metadatum, 'Utexas\DocRepo\Model\Metadatum')) {
             throw new Exception('Metadatum argument must be passed as either an array with a name-value pair, or as a Ut\DocRepo\Model\Metadatum object.');
         }
 

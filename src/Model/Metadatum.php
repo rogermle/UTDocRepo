@@ -3,7 +3,7 @@
  * Copyright (c) 2017 University of Texas at Austin
  */
 
-namespace Ut\DocRepo\Model;
+namespace Utexas\DocRepo\Model;
 
 use SimpleXMLElement;
 

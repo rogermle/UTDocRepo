@@ -1,8 +1,8 @@
 <?php
 
-namespace Ut\DocRepo\Exception;
+namespace Utexas\DocRepo\Exception;
 
-use Ut\DocRepo\Exception;
+use Utexas\DocRepo\Exception;
 
 class InternalError extends Exception
 {

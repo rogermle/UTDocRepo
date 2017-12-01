@@ -1,6 +1,6 @@
 <?php
 
-namespace Ut\DocRepo;
+namespace Utexas\DocRepo;
 
 class Exception extends \Exception
 {

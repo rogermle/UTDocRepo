@@ -3,9 +3,9 @@
  * Copyright (c) 2017 University of Texas at Austin
  */
 
-namespace Ut\DocRepo\Model;
+namespace Utexas\DocRepo\Model;
 
-use Ut\DocRepo\Exception;
+use Utexas\DocRepo\Exception;
 use SimpleXMLElement;
 
 /**
@@ -54,7 +54,7 @@ class File
             }
         }
 
-        if (!is_a($metadatum, 'Ut\DocRepo\Model\Metadatum')) {
+        if (!is_a($metadatum, 'Utexas\DocRepo\Model\Metadatum')) {
             throw new Exception(
                 'Metadatum argument must be passed as either an array with a name-value pair,
              or as a Ut\DocRepo\Model\Metadatum object.'
@@ -244,7 +244,7 @@ class File
     {
         $metadata_as_objs = array();
         foreach ($metadata as $key => $value) {
-            if (!is_a($value, 'Ut\DocRepo\Model\Metadatum')) {
+            if (!is_a($value, 'Utexas\DocRepo\Model\Metadatum')) {
                 $metadatum = new Metadatum((string)$key, (string)$value);
             } else {
                 $metadatum = $value;

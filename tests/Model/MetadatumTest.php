@@ -1,8 +1,8 @@
 <?php
 
-namespace Ut\DocRepo\Model\Tests;
+namespace Utexas\DocRepo\Model\Tests;
 
-use Ut\DocRepo\Model\Metadatum;
+use Utexas\DocRepo\Model\Metadatum;
 
 class MetadatumTest extends \PHPUnit\Framework\TestCase
 {
@@ -12,7 +12,7 @@ class MetadatumTest extends \PHPUnit\Framework\TestCase
     public function testConstructorReturnsInstance()
     {
         $metadatum = new Metadatum('foo', 'bar');
-        $this->assertTrue(is_a($metadatum, 'Ut\DocRepo\Model\Metadatum'));
+        $this->assertTrue(is_a($metadatum, 'Utexas\DocRepo\Model\Metadatum'));
         return $metadatum;
     }
 

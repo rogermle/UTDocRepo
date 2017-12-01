@@ -28,12 +28,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Ut\\DocRepo\\": "src"
+      "Utexas\\DocRepo\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Ut\\DocRepo\\": "tests"
+      "Utexas\\DocRepo\\": "tests"
     }
   },
   "scripts": {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Ut\DocRepo\Model\Tests;
+namespace Utexas\DocRepo\Model\Tests;
 
-use Ut\DocRepo\Model\File;
+use Utexas\DocRepo\Model\File;
 
-use Ut\DocRepo\Model\Metadatum;
+use Utexas\DocRepo\Model\Metadatum;
 
 class FileTest extends \PHPUnit\Framework\TestCase
 {
@@ -20,7 +20,7 @@ class FileTest extends \PHPUnit\Framework\TestCase
 
     public function testFromSimpleXmlElement()
     {
-        $this->assertTrue(is_a($this->file, 'Ut\DocRepo\Model\File'));
+        $this->assertTrue(is_a($this->file, 'Utexas\DocRepo\Model\File'));
     }
 
     public function testGetName()

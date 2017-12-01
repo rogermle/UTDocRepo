@@ -1,10 +1,10 @@
 <?php
 
-namespace Ut\DocRepo\Rest\Tests;
+namespace Utexas\DocRepo\Rest\Tests;
 
-use Ut\DocRepo\Rest\Client;
-use Ut\DocRepo\Model\File;
-use Ut\DocRepo\Model\Metadatum;
+use Utexas\DocRepo\Rest\Client;
+use Utexas\DocRepo\Model\File;
+use Utexas\DocRepo\Model\Metadatum;
 
 class ClientTest extends \PHPUnit\Framework\TestCase
 {
@@ -60,7 +60,7 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         $metadatum = new Metadatum($name, $value);
         $return_metadatum = $this->client->addMetadatum($file_id, $metadatum);
 
-        $this->assertTrue(is_a($return_metadatum, 'Ut\DocRepo\Model\Metadatum'));
+        $this->assertTrue(is_a($return_metadatum, 'Utexas\DocRepo\Model\Metadatum'));
         $this->assertEquals($name, $return_metadatum->getName());
         $this->assertEquals($value, $return_metadatum->getValue());
 
@@ -77,7 +77,7 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         $metadatum = array($name => $value);
         $return_metadatum = $this->client->addMetadatum($file_id, $metadatum);
 
-        $this->assertTrue(is_a($return_metadatum, 'Ut\DocRepo\Model\Metadatum'));
+        $this->assertTrue(is_a($return_metadatum, 'Utexas\DocRepo\Model\Metadatum'));
         $this->assertEquals($name, $return_metadatum->getName());
         $this->assertEquals($value, $return_metadatum->getValue());
 
@@ -187,7 +187,7 @@ class ClientTest extends \PHPUnit\Framework\TestCase
      */
     public function testDelete($file_id)
     {
-        $this->expectException('Ut\DocRepo\Exception\ResourceNotFound');
+        $this->expectException('Utexas\DocRepo\Exception\ResourceNotFound');
         $this->client->delete($file_id);
         $file = $this->client->get($file_id);
     }
