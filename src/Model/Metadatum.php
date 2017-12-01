@@ -29,6 +29,7 @@ class Metadatum
      * @param string $name
      * @param string $value
      * @return Metadatum
+     *
      */
     public function __construct($name, $value)
     {

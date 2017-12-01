@@ -10,7 +10,7 @@ use SimpleXMLElement;
 
 /**
  * File Model Class
- * @package Ut\DocRepo\Model
+ * @package Utexas\DocRepo\Model
  * @author Roger Le <roger.le@austin.utexas.edu>
  */
 class File
@@ -39,7 +39,7 @@ class File
 
     /**
      * Add a metadatum to the file's metadata. Metadatum can be passed in either
-     * as a Ut\DocRepo\Model\Metadatum object or an array with one name-value pair.
+     * as a Utexas\DocRepo\Model\Metadatum object or an array with one name-value pair.
      *
      * @param Metadatum $metadatum
      * @return File
@@ -57,7 +57,7 @@ class File
         if (!is_a($metadatum, 'Utexas\DocRepo\Model\Metadatum')) {
             throw new Exception(
                 'Metadatum argument must be passed as either an array with a name-value pair,
-             or as a Ut\DocRepo\Model\Metadatum object.'
+             or as a Utexas\DocRepo\Model\Metadatum object.'
             );
         }
 
