@@ -1,22 +1,27 @@
-# :package_name
+# UT DocRepositoryPHP
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
+[![Build Status](https://travis-ci.org/rogermle/docrepo.svg?branch=master)](https://travis-ci.org/rogermle/docrepo)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_website``` ```:author_email``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
+The Document Repository PHP client was created to provide an object-oriented 
+PHP class for interacting with the ITS Document Repository, which is a "secure, 
+generalized library for storing binary documents and the metadata that
+describes them."
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+The external API of the PHP client was written to mimic the behavior and 
+syntax of the DocRepository Java API. Internally, it uses PHP's cURL library 
+to interact with the Document Repository's REST API.
 
 ## Structure
 
 If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
 
 ```
+build/
 src/
 tests/
 ```
@@ -27,13 +32,13 @@ tests/
 Via Composer
 
 ``` bash
-$ composer require ut/docrepo
+$ composer require utexas/docrepo
 ```
 
 ## Usage
 
 ``` php
-$client = new Ut\DocRepo\Client();
+$client = new Utexas\DocRepo\Client();
 $client->get('1234);
 ```
 
@@ -48,32 +53,34 @@ $ composer test
 ```
 
 ## Acknowledgement
-
+The code in this project is based heavily on work done by 
+[Paul Grotevant](https://github.com/gravelpot) of ITS Applications and
+by Geoff Boyd in Liberal Arts ITS. It would not have been possible without the assistance of the 
+Document Repository developer team, especially Chris Pittman and Dory Weiss.
 
 ## Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please email roger.le@austin.utexas.edu instead of using the issue tracker.
 
 ## Credits
 
-- [Roger Le][http://github.com/rogermle]
-- [Paul Grotevant][]
+- [Roger Le](https://github.com/rogermle)
 
 ## License
 
 The BSD 3 Clause License (BSD3). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/:vendor/:package_name.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/utexas/docrepo.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/:vendor/:package_name/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/:vendor/:package_name.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/utexas/docrepo/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/utexas/docrepo.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/utexas/docrepo.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/utexas/docrepo.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/:vendor/:package_name
-[link-travis]: https://travis-ci.org/:vendor/:package_name
-[link-scrutinizer]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name
-[link-downloads]: https://packagist.org/packages/:vendor/:package_name
-[link-author]: https://github.com/:author_username
+[link-packagist]: https://packagist.org/packages/utexas/docrepo
+[link-travis]: https://travis-ci.org/utexas/docrepo
+[link-scrutinizer]: https://scrutinizer-ci.com/g/utexas/docrepo/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/utexas/docrepo
+[link-downloads]: https://packagist.org/packages/utexas/docrepo
+[link-author]: https://github.com/rogermle
 [link-contributors]: ../../contributors
