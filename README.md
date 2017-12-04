@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/rogermle/docrepo.svg?branch=master)](https://travis-ci.org/rogermle/docrepo)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rogermle/docrepo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rogermle/docrepo/?branch=master)
 [![Total Downloads][ico-downloads]][link-downloads]
 
 The Document Repository PHP client was created to provide an object-oriented 
@@ -22,6 +22,7 @@ If any of the following are applicable to your project, then the directory struc
 
 ```
 build/
+examples/
 src/
 tests/
 ```
@@ -38,8 +39,17 @@ $ composer require utexas/docrepo
 ## Usage
 
 ``` php
-$client = new Utexas\DocRepo\Client();
-$client->get('1234);
+$client = new Utexas\DocRepo\Client(
+            'http://docrep-test.its.utexas.edu/docrepo-test/api',
+            'DocManger PHP',
+            'test',
+            'test'
+        );
+        
+// You can also configure using a config.ini file
+
+$file = $client->get('1234');
+var_dump($file);
 ```
 
 ## Change log
