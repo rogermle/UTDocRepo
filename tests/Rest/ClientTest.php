@@ -2,6 +2,7 @@
 
 namespace Utexas\DocRepo\Rest\Tests;
 
+use Utexas\DocRepo\Exception;
 use Utexas\DocRepo\Rest\Client;
 use Utexas\DocRepo\Model\File;
 use Utexas\DocRepo\Model\Metadatum;
@@ -82,6 +83,16 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($value, $return_metadatum->getValue());
 
         return $file_id;
+    }
+
+    /**
+     * @depends testAddMetadataAsObject
+     * @expectedException Exception
+     */
+
+    public function testAddBadMetadatum($file_id)
+    {
+        $return_metadatum = $this->client->addMetadatum($file_id, null);
     }
 
     /**
@@ -190,5 +201,10 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         $this->expectException('Utexas\DocRepo\Exception\ResourceNotFound');
         $this->client->delete($file_id);
         $file = $this->client->get($file_id);
+    }
+
+    protected function tearDown()
+    {
+        unset($this->client);
     }
 }

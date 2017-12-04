@@ -2,6 +2,7 @@
 
 namespace Utexas\DocRepo\Model\Tests;
 
+use Utexas\DocRepo\Exception;
 use Utexas\DocRepo\Model\File;
 
 use Utexas\DocRepo\Model\Metadatum;
@@ -142,6 +143,19 @@ class FileTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($retrieved_metadatum, $metadatum);
     }
 
+    /**
+     * @expectedException Utexas\DocRepo\Exception
+     * @expectedExceptionMessage Metadatum bar is not defined.
+     */
+
+    public function testGetBadMetadatum()
+    {
+        $metadatum = new Metadatum('foo', 'bar');
+        $this->file->addMetadatum($metadatum);
+        $retrieved_metadatum = $this->file->getNamedMetadatum('bar');
+        $this->expectException('Utexas\DocRepo\Exception');
+    }
+
     public function testRemoveMetadatum()
     {
         $metadatum = new Metadatum('foo', 'bar');
@@ -149,6 +163,15 @@ class FileTest extends \PHPUnit\Framework\TestCase
         $this->assertTrue($this->file->getMetadata() == array($metadatum));
         $this->file->removeMetadatum('foo');
         $this->assertEquals(array(), $this->file->getMetadata());
+    }
+
+    /**
+     * @expectedException Utexas\DocRepo\Exception
+     */
+
+    public function testRemoveBadMetadatum()
+    {
+        $this->file->removeMetadatum('badInput');
     }
 
     public function testToSimpleXmlElementReturnsSimpleXmlElement()
